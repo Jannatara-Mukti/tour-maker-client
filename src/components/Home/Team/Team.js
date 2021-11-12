@@ -12,7 +12,7 @@ const Team = () => {
             <div className="p-4">
                 <div className="row">
                     <div className="col-md-3">
-                        <div className="card" style={{width:"13rem"}}>
+                        <div className="card">
                             <img src={img1} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title text-success">James Michael</h5>
@@ -24,7 +24,7 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <div className="card" style={{width:"13rem"}}>
+                        <div className="card">
                             <img src={img2} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title text-success">William David</h5>
@@ -36,7 +36,7 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <div className="card" style={{width:"13rem"}}>
+                        <div className="card">
                             <img src={img3} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title text-success">Linda Elizabeth</h5>
@@ -48,7 +48,7 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="col-md-3">
-                    <div className="card" style={{width:"13rem"}}>
+                    <div className="card">
                             <img src={img4} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title text-success">John Daniel</h5>

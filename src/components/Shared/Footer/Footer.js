@@ -24,26 +24,26 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="text-start mt-5"> 
+                    <div className="text-start my-5"> 
                         <h6 style={{fontSize:"14px"}}>NEWSLETTER</h6>
                         <p style={{fontSize:"12px", marginBottom:"10px"}}>Make a Tour with Tour_Maker. We promise to give you a memorable experience.</p>
                         <div className="d-flex justify-content">
                             <input className="form-control w-75 rounded-start" />
-                            <span className="bg-white text-success p-1 rounded-end"><i class='fas fa-arrow-alt-circle-right'></i></span>
+                            <span className="bg-white text-success px-1 pb-1 pt-2 rounded-end"><i class='fas fa-arrow-alt-circle-right'></i></span>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="instagram text-start">
+                    <div className="instagram text-start text-sm-center">
                         <h6 style={{fontSize:"14px"}}>INSTAGRAM</h6>
                         <div>
                             <div className="row">
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img1} alt="" /></div>
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img2} alt="" /></div>
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img3} alt="" /></div>
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img4} alt="" /></div>
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img5} alt="" /></div>
-                                <div className="col-md-4 m-0 p-0"><img className="w-100" src={img6} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img1} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img2} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img3} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img4} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img5} alt="" /></div>
+                                <div className="col-md-4 col-sm-2 m-0 p-0"><img className="w-100" src={img6} alt="" /></div>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ const PlaceOrder = () => {
     const email = sessionStorage.getItem("email");
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleService/${serviceId}`)
+        fetch(`https://damp-basin-52283.herokuapp.com/singleService/${serviceId}`)
         .then(res => res.json())
         .then( data=> setService(data))
     }, []);
@@ -19,7 +19,7 @@ const PlaceOrder = () => {
         data.email = email;
         data.status = "Pending";
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://damp-basin-52283.herokuapp.com/placeOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

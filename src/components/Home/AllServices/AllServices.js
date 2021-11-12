@@ -6,7 +6,7 @@ const AllServices = () => {
     const [services, setServices] = useState();
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/allServices')
+        fetch('https://damp-basin-52283.herokuapp.com/allServices')
         .then(res => res.json()
         .then(result => setServices(result)))
     }, [])
@@ -18,7 +18,7 @@ const AllServices = () => {
                 {
                     services?.map( service => (
                         <div className="col-md-4 my-2">
-                            <div className="card" style={{width: "18rem"}}>
+                            <div className="card" >
                                     <img className="card-img-top" src={service?.image} alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title text-success">{service?.name}</h5>

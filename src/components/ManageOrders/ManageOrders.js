@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const [control, setControl] = useState(false);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://damp-basin-52283.herokuapp.com/allOrders')
         .then(res => res.json())
         .then(result => setOrders(result))
     }, [control]);
@@ -18,7 +18,7 @@ const ManageOrders = () => {
     //    console.log(status);
         const status = "Approved";
 
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://damp-basin-52283.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -39,7 +39,7 @@ const ManageOrders = () => {
         const proceed = window.confirm("Are You sure, you want to delete?");
 
         if(proceed){
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://damp-basin-52283.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE'
             })
             .then(res=>res.json())
@@ -55,14 +55,14 @@ const ManageOrders = () => {
 
     return (
         <div>
-            <h3>Manage All Orders</h3>
+            <h3 className="py-2 text-success">Manage All Orders</h3>
             <div className="mt-3">
                 <div className="row">
                     {
                         orders.map( order => (
                             <div className="col-md-4" key={order?._id}>
                                <div className="mb-2">
-                               <div className="card" style={{width: "14rem"}}>
+                               <div className="card">
                                     <img className="card-img-top" src={order?.image} alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title text-success" style={{fontSize:"14px"}}>{order?.name}</h5>

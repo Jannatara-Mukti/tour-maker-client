@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [control, setControl] = useState(false);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://damp-basin-52283.herokuapp.com/myOrders/${email}`)
         .then( res=> res.json())
         .then(data => setServices(data))
     }, [control]);
@@ -18,7 +18,7 @@ const MyOrders = () => {
         const proceed = window.confirm("Are You sure, you want to delete?");
 
         if(proceed){
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://damp-basin-52283.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE'
             })
             .then(res=>res.json())
@@ -42,7 +42,7 @@ const MyOrders = () => {
                     {
                         services.map( service => (
                             <div className="col-md-4" key={service?._id}>
-                                 <div className="card" style={{width: "18rem"}}>
+                                 <div className="card">
                                     <img className="card-img-top" src={service?.image} alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title text-success">{service?.name}</h5>

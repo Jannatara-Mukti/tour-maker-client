@@ -5,7 +5,7 @@ const AddServices = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/addServices', {
+        fetch('https://damp-basin-52283.herokuapp.com/addServices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

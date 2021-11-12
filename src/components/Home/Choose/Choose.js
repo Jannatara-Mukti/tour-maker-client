@@ -25,7 +25,7 @@ const Choose = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <img src={img} alt="" />
+                    <img src={img} className="img-fluid" alt="" />
                 </div>
             </div>
             </div>
