@@ -1,23 +1,55 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Login from './components/Login/Login/Login';
+import Header from './components/Shared/Header/Header';
+import Home from './components/Home/Home/Home';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import MyOrders from './components/MyOrders/MyOrders';
+import NotFound from './components/NotFound/NotFound';
+import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import Footer from './components/Shared/Footer/Footer';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     <AuthProvider>
+      <BrowserRouter>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <PrivateRoute path="/adminDashboard">
+              <AdminDashboard></AdminDashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/placeOrder/:serviceId">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <Route path="*">
+                <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </BrowserRouter>
+     </AuthProvider>
+
+      
+ 
     </div>
   );
 }

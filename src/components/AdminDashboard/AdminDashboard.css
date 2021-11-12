@@ -1,0 +1,6 @@
+.admin-menu {
+    height: 100vh;
+}
+.admin-menu li{
+    list-style: none;
+}
