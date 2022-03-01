@@ -29,7 +29,7 @@ const Footer = () => {
                         <p style={{fontSize:"12px", marginBottom:"10px"}}>Make a Tour with Tour_Maker. We promise to give you a memorable experience.</p>
                         <div className="d-flex justify-content">
                             <input className="form-control w-75 rounded-start" />
-                            <span className="bg-white text-success px-1 pb-1 pt-2 rounded-end"><i className='fas fa-arrow-alt-circle-right fa-3x'></i></span>
+                            <span className="bg-white text-success rounded-end"><i className='fas fa-arrow-alt-circle-right fa-2x pt-1'></i></span>
                         </div>
                     </div>
                 </div>
