@@ -44,7 +44,7 @@ const PlaceOrder = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="text-start">
-                            <div className="card" style={{width: "23rem"}}>
+                            <div className="card">
                                     <img className="card-img-top" src={service?.image} alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title text-success">{service?.name}</h5>
