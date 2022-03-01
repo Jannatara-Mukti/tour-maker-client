@@ -12,10 +12,10 @@ const AdminDashboard = () => {
             <div className="my-5">
                 <h4>Welcome to Admin Dashboard</h4>
             </div>
-            <div className="m-2">
+            <div className="m-2 pt-2 pb-5">
                 <div className="row">
-                    <div className="col-md-4">
-                        <div className="admin-menu bg-dark text-light py-5 " style={{width:"12rem"}}>
+                    <div className="col-md-4 col-sm-12">
+                        <div className="admin-menu bg-dark text-light py-5 ">
                             <li onClick={()=>setControl("addServices")} className="my-3">Add Services</li>
                             <li onClick={()=>setControl("manageOrders")} className="my-3">Manage All Orders</li>
                         </div>
